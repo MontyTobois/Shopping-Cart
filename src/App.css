@@ -1,8 +1,12 @@
-.App {
+.container {
   margin-top: 10px;
 }
 
 .purchase-card{
   width: 350px;
   box-shadow: 0 4px 8px 0 rgb(98, 102, 93);
+}
+
+.show-grid{
+  padding-bottom: 1.5em;
 }
