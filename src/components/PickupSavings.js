@@ -11,7 +11,7 @@ let styles = {
   }
 }
 
-export class PickupSaving extends Component { // eslint-disable-line react/prefer-stateless-function
+export class PickupSavings extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     const tooltip = (
       <Tooltip id="tooltip">
@@ -35,4 +35,4 @@ export class PickupSaving extends Component { // eslint-disable-line react/prefe
 //   prop: PropTypes.type.isRequired
 // }
 
-export default PickupSaving;
+export default PickupSavings;
