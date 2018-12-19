@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props){
     super(props)
       this.state ={
-        total: 1000,
+        total: 359,
         pickupSavings: -3.85,
         taxes: 0,
         estimatedTotal: 0
@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (<div className="container">
       <Grid className="purchase-card">
-        <h1>Hello world</h1>
+        <h1>Shopping Cart</h1>
         <Subtotal price={this.state.total.toFixed(2)} />
         <PickupSavings price={this.state.pickupSavings} />
         <TaxesFees taxes={this.state.taxes.toFixed(2)} />
