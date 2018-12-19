@@ -27,7 +27,7 @@ class App extends Component {
         <TaxesFees taxes={this.state.taxes.toFixed(2)} />
         <hr/>
         <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)} />
-        <ItemDetails />
+        <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
       </Grid>
     </div>);
   }

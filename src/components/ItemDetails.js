@@ -40,7 +40,9 @@ export class ItemDetails extends Component { // eslint-disable-line react/prefer
                       <strong>{`$${this.props.price}`}</strong>
                       <br/>
                       <strong className="price-strike">{`$${this.props.price}`}</strong>
-
+                    </Col>
+                    <Col md={6}>
+                      Qty: 1
                     </Col>
                   </Row>
                 </Media.Body>
