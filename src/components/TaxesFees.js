@@ -6,7 +6,7 @@ export class TaxesFees extends Component { // eslint-disable-line react/prefer-s
   render() {
     return (
       <Row className="show-grid">
-        <Col md={6}>Est. taxes & fees (Based on 11223)</Col>
+        <Col md={6}>Est. taxes & fees (Based on 32818)</Col>
         <Col md={6}>{`$${this.props.taxes}`}</Col>
       </Row>
     );

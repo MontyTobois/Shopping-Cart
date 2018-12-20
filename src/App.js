@@ -20,6 +20,18 @@ class App extends Component {
       };
   }
 
+  componentDidMount = () => {
+    this.setState({
+      taxes: (this.state.total + this.state.pickupSavings) *0.065
+    },
+  function(){
+    this.setState({
+      estimatedTotal:
+      this.state.total + this.state.pickupSavings + this.state.taxes
+    })
+  })
+  }
+
   render() {
     return (<div className="container">
       <Grid className="purchase-card">
