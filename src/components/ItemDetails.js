@@ -18,7 +18,7 @@ export class ItemDetails extends Component { // eslint-disable-line react/prefer
           bsStyle="link"
           onClick={() => this.setState({ open: !this.state.open })}
           >
-          { this.state.open === false ? `See` : `Hide` } item details
+          { this.state.open === false ? `See` : `Hide` } Item Details
           { this.state.open === false ? ` +`: ` -`}
         </Button>
         <Collapse in={this.state.open}>

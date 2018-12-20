@@ -20,3 +20,7 @@
 .price-strike{
   text-decoration: line-through rgb(247, 35, 35);
 }
+
+.promo-code-button:focus{
+  outline: none;
+}
