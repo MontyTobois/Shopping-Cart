@@ -6,6 +6,8 @@ import TaxesFees from './components/TaxesFees';
 import EstimatedTotal from './components/EstimatedTotal';
 import ItemDetails from './components/ItemDetails';
 import PromoCode from './components/PromoCode';
+import { connect } from 'react-redux';
+import { handleChange } from './actions/promoCodeActions';
 import './App.css';
 
 class App extends Component {
@@ -51,4 +53,9 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStatetoProps = state => ({
+  promoCode: state.promoCode.value
+})
+
+
+export default connect(mapStatetoProps, { handleChange })(App);

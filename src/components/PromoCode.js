@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { Row, Col, Media, Button, Collapse, Well, FormGroup, ControlLabel, FormControl, Form } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { handleChange } from '../actions/promoCodeActions';
 
 
 class PromoCode extends Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props){
     super(props)
     this.state = {
-      open: false,
-      value: ''
+      open: false
     }
+  }
+
+  handleChange = e => {
+    this.props.handleChange(e);
   }
 
   render() {
@@ -25,7 +30,7 @@ class PromoCode extends Component { // eslint-disable-line react/prefer-stateles
         <Collapse in={this.state.open}>
         <div>
           <Well>
-            <Row classname="show-grid">
+            <Row className="show-grid">
               <Col md={12}>
                 <Form>
                   <FormGroup controlId="formInlineName">
@@ -57,4 +62,8 @@ class PromoCode extends Component { // eslint-disable-line react/prefer-stateles
   }
 }
 
-export default PromoCode;
+const mapStatetoProps = state => ({
+  promoCode: state.promoCode.value
+})
+
+export default connect(mapStatetoProps, { handleChange })(PromoCode);
