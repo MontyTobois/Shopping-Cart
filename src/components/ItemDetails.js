@@ -34,7 +34,7 @@ export class ItemDetails extends Component { // eslint-disable-line react/prefer
                   />
                 </Media.Left>
                 <Media.Body>
-                  <p>Take flight with Dji Spark Drone Alpine White With Remote Control Combo </p>
+                  <p>Take flight with the Dji Spark Drone Alpine White With Remote Control Combo </p>
                   <Row className="show-grid">
                     <Col md={6}>
                       <strong>{`$${this.props.price}`}</strong>

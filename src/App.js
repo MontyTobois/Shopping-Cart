@@ -15,7 +15,8 @@ class App extends Component {
         total: 359,
         pickupSavings: -3.85,
         taxes: 0,
-        estimatedTotal: 0
+        estimatedTotal: 0,
+        disablePromoButton: false
       };
   }
 
@@ -30,7 +31,9 @@ class App extends Component {
         <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)} />
         <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
         <hr/>
-        <PromoCode />
+        <PromoCode
+         giveDiscount={() => this.giveDiscountHandler}
+         isDisabled={this.state.disablePromoButton}/>
       </Grid>
     </div>);
   }
