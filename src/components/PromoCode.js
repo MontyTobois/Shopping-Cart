@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Media, Button, Collapse, Well, FormGroup, ControlLabel, FormControl, Form } from 'react-bootstrap';
+import { Row, Col, Button, Collapse, Well, FormGroup, ControlLabel, FormControl, Form } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { handleChange } from '../actions/promoCodeActions';
 

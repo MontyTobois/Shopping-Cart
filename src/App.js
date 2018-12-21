@@ -6,8 +6,10 @@ import TaxesFees from './components/TaxesFees';
 import EstimatedTotal from './components/EstimatedTotal';
 import ItemDetails from './components/ItemDetails';
 import PromoCode from './components/PromoCode';
+// Redux Component
 import { connect } from 'react-redux';
 import { handleChange } from './actions/promoCodeActions';
+// Style
 import './App.css';
 
 class App extends Component {
@@ -34,6 +36,18 @@ class App extends Component {
   })
   }
 
+  giveDiscountHandler = () => {
+    if (this.props.promoCode === 'DISCOUNT') {
+      this.setState(
+        { estimatedTotal: this.state.estimatedTotal * 0.9 },
+    function () {
+      this.setState({
+        disablePromoButton : true
+      })
+    })
+    }
+  }
+
   render() {
     return (<div className="container">
       <Grid className="purchase-card">
@@ -46,7 +60,7 @@ class App extends Component {
         <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
         <hr/>
         <PromoCode
-         giveDiscount={() => this.giveDiscountHandler}
+         giveDiscount={() => this.giveDiscountHandler()}
          isDisabled={this.state.disablePromoButton}/>
       </Grid>
     </div>);
