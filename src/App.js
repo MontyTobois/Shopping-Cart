@@ -36,8 +36,9 @@ class App extends Component {
   })
   }
 
+// Will drop the price lower on current item
   giveDiscountHandler = () => {
-    if (this.props.promoCode === 'DISCOUNT') {
+    if (this.props.promoCode === 'BIRD') {
       this.setState(
         { estimatedTotal: this.state.estimatedTotal * 0.9 },
     function () {
